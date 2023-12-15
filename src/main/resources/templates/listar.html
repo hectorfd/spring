@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Listar</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
@@ -23,10 +23,11 @@
                 <td th:text="${persona.nombre}"></td>
                 <td th:text="${persona.edad}"></td>
                 <td>
-                    <a>Editar</a>
-                    <a>Eliminar</a>
+                    <a th:href="@{/personas/editar/{id}(id=${persona.id})}">Editar </a>
+                    <a th:href="@{/personas/eliminar/{id}(id=${persona.id})}">Eliminar</a>
                 </td>
             </tr>
         </table>
+        <a href="personas/nueva">Nueva persona</a>
     </body>
 </html>
